@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- THIS IS THE PHOTO GALLERY PAGE -->
+	<head>
+		<title>Photo Gallery</title>
+		<meta charset="UTF-8" />
+		<link href="stylesheets/gallery.css" rel="stylesheet" type="text/css" />
+		<script type = "text/javascript" src="scripts/modernizr-1.5.js"></script>
+	</head>
+
+	<h1 align="center">Photo Gallery</h1>
+	<body>
+		<script>
+			/*****  PHOTO GALLERY SCRIPT  *****/
+			// This script should change the photos without user interaction
+			var gallery= new Array(9);
+			var newPic=0;
+			gallery[0]="gallery1.jpg";
+			gallery[1]="gallery2.jpg";
+			gallery[2]="gallery3.jpg";
+			gallery[3]="gallery4.jpg";
+			gallery[4]="gallery7.jpg";
+			gallery[5]="gallery5.jpg";
+			gallery[6]="gallery6.jpg";
+			gallery[7]="gallery8.jpg";
+			gallery[8]="gallery9.jpg";
+
+			function scrollPics(){
+				if(newPic==8)
+					newPic=0;
+				else
+					++newPic;
+				document.images[0].src = "photos/" + gallery[newPic];
+			}
+		</script>
+		<body onload="setInterval('scrollPics()', 3000)">
+		<img class="gallery" src="photos/gallery1.jpg"/>
+
+		<!-- navigation bar with buttons/links -->
+		<div id="links">
+			<a href="justus.html"><img class="links" src="buttons/home.png" alt="homepage"></a>
+			<a href="aboutus.html"><img class="links" src="buttons/bio.png" alt="About Us"></a>
+			<a href="meetus.html"><img class="links" src="buttons/crew.png" alt="the crew"></a>
+			<a href="events.html"><img class="links" src="buttons/events.png" alt="events"></a>
+			<a href="videos.html"><img class="links" src="buttons/videos.png" alt="videos"></a>
+			<a href="contact.html"><img class="links" src="buttons/contactus.png" alt="contact us"></a>
+		</div>
+		<!-- end navigation bar -->
+
+	</body>
+</html>

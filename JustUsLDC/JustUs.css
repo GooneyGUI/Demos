@@ -1,0 +1,55 @@
+/* This is the stylesheet which corresponds to JustUs LDC web page. 
+	There is no current host. 
+	
+	layout design: GooneyGUIs
+	coding done by: Gooney @GooneyGUIs
+	started:
+	finished:
+	*/
+	
+@font-face {
+	font-family: homepage;
+	src: url('Fonts/Joystick.otf');
+	}
+	
+/*properties for all pages*/
+body {
+	font-family: homepage;
+	background-color: rgb(178,255,102);
+	font-size: 32px;
+	}
+
+/*homepage*/
+.logo{
+	display: block;
+	text-align: center;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* get cell phone number*/	
+.cell {
+	font-size: 22px;
+}
+
+
+/* join us at our new location*/
+h1{
+	text-align: center;
+	font-size: 32px;
+}
+
+
+/*map and address*/
+.wednesday{
+	display: block;
+	text-align: center; 
+}
+
+/*facebook properties*/
+div {
+	display: block;
+	text-align: center;
+
+}

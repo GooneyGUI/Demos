@@ -1,0 +1,59 @@
+/* STYLESHEET FOR THE ABOUT US PAGE	*/
+	
+/***********************************
+ ****	FORMAT FOR ALL PAGES ****
+ ***********************************/
+
+ /*FONT SELECTION*/
+@font-face 
+{
+	font-family: Overlock;
+	src:url(fonts/Overlock.ttf);
+	}
+/* END FORMAT FOR ALL PAGES */
+
+	
+/* BODY STYLE */	
+body {
+	font-family: overlock;
+	background-color: rgb(178,255,102);
+	font-size: 24px;
+	text-align: center;
+	}
+		
+
+/* formatting for the dancepeeps logo*/	
+.dancepeeps{
+	width: 40%;
+	text-align: center;
+	margin-top: 4px;
+	}
+
+header{
+	font-family: overlock;
+	font-weight: bold;
+	font-size: 35px;
+	text-align: center;
+	color: rgb(0,0,0);
+	margin-bottom: 5px;
+	margin-top: 50px;
+	}
+	
+/***************************
+ ****	LINK PROPERTIES ****
+ **************************/
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: #634d7a;
+}
+
+/* selected link */
+a:active {
+    color: #2a381f;
+}

@@ -1,0 +1,79 @@
+/* This is the stylesheet which corresponds to JustUs LDC web page. 
+	There is no current host. 
+	
+	layout design: GooneyGUIs
+	coding done by: Gooney @GooneyGUIs
+	started:
+	finished:
+	*/
+	
+@font-face {
+	font-family: overlock;
+	src: url('Fonts/Overlock.ttf');
+	}
+	
+	/*properties for all pages*/
+
+header{
+	font-size: 40px;
+	font-weight: bold;
+}	
+	
+body {
+	font-family: overlock;
+	background-color: rgb(0,0,0);
+	font-size: 24px;
+	color: rgb(178,255,102);
+	text-align: center;
+	}
+
+.tpayne{
+	display: block;
+	float: left;
+	width: 20%;
+	height: 20%;
+	border-radius: 40px;
+	margin-bottom: 40px;
+}
+
+div{
+	display: block;
+	float: left;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:550px;
+	
+}
+.babyboo{
+	display: block;
+	float: right;
+	width: 20%;
+	height: 20%;
+	border-radius: 40px;
+}
+
+
+div1{
+	float: right;
+	margin-top:10px;
+	margin-bottom:10px;
+	display: block;
+	width: 550px;
+}
+
+
+.crew{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 35%;
+	height: 40%;
+	border-radius: 40px;
+	}
+
+
+.test{
+	display: block;
+	position: relative;
+	text-align: center;
+	}
+

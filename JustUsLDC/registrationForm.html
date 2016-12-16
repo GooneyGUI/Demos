@@ -1,0 +1,150 @@
+<!-- THIS IS THE REGISTRATION FORM -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Registration</title>
+	<meta charset="UTF-8" />
+	<script src="modernizr-1.5.js"></script>
+	<!--<script>
+	var creditCard = getElementById(paypal);
+	if creditCard==true;{
+	window.open("www.paypal.com");
+	}
+	</script>-->
+	<link href="stylesheets/regForm.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<center>
+<script>/* TODAY'S DATE*/
+var today = new Date().toLocaleString();
+document.write("Today is " + today);
+</script>
+
+</p><!-- FLYER -->
+<img class="flyer" src ="photos/2017event.jpg" border="5">
+<h1> A mirACLE At The Fairgrounds</h1>
+<br>
+<h2> Registration Form</h2>
+<hr size="10">
+<!-- REGISTRATION FORM -->	
+<table>
+<form action="demo_form.asp" method="get">
+<div id="participants">
+<b> Full Name:&emsp;&emsp;&emsp;</b><input type="text" name="FullName[]" id = "fname1"></p>
+</div>
+</form>	
+<!-- MULTIPLE REGISTRATIONS SCRIPT -->
+<script>
+// Initialize variables for use within the cost() function
+var counter = 1;
+var limit = 5;
+var price = 50.00;
+var today = new Date().toLocaleString();
+var earlyBird = new Date(0,31,2017).toLocaleString();
+var ebprice = 35.00;
+var shirt = 1;
+var shirtCost = 0.0;
+var shirtPrice = 5.00;
+
+// Function for the multiple person registration fields
+function addInput(divName){
+     if (counter == limit)  {
+          alert("Please fill out a new form for the remaining participants " );
+     }
+     else {
+          shirt++;
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Full Name # " + (counter + 1) +"&emsp;&emsp;" +
+		  "<input type='text' name='myInputs[]'></p>";
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+          
+     }
+
+}
+
+// Function to display the total cost of the order
+function cost(divName) {
+	if (today < earlyBird) {
+		var regCost = ebprice * counter;
+	} else {
+		var regCost = price * counter;
+	}
+	for (var index = 0; index < shirt; index++) {
+		var newdiv = document.createElement('div');
+		shirtCost = shirtPrice*(index+1);
+		newdiv.innerHTML = "Cost of " + (index+1) + " shirt(s): $" + shirtCost;
+		document.getElementById(divName).appendChild(newdiv);
+	}
+    var newdiv = document.createElement('div');
+	newdiv.innerHTML = "Registration cost: $" + regCost + "<br><br>Total Cost (with " + shirt + " shirt(s)): $" + (regCost+shirtCost);
+	document.getElementById(divName).appendChild(newdiv);	
+}
+
+// Function to validate that an option was chosen and to send you to the paypal website
+function paymentType() {
+	if (document.getElementById("paypal").checked == true) {
+		window.open("http://www.paypal.com");
+	}
+	if ((document.getElementById("paypal").checked == false) && (document.getElementById("atDoor").checked == false)) {
+		alert("You did not choose a payment option.\nPlease select one now.");
+		return false;
+	}
+}
+
+// Initialization of the variable used for the full name validation
+var fname = document.getElementById("fname1");
+
+// Function to validate that something was input into the Full Name Field
+function checkName() {
+	if (fname.value == "") {
+		alert("You did not enter a name.\nPlease enter one now.");
+		fname.focus();
+		return false;
+	} else {
+		cost('participants');
+		return true;
+	}
+}
+
+// Function to validate the phone number
+function checkPhone() {
+	var phnNum = document.getElementById("phone");
+	var patt = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+	if (patt.test(phnNum.value)) {
+		return true;
+	} else {
+		alert("You entered an invalid phone number.\nPlease re-enter in a valid format.");
+		phnNum.focus();
+		return false;
+	}
+}
+</script>    
+<!-- END SCRIPT -->
+
+</table>
+<form>
+<center>
+<input type="button" id="numReg" value="Register an additional person" onClick="addInput('participants');">
+<input type="button" id="numPar" value="Check Cost" onClick="checkName();">
+</center>
+<p>
+<b>Group Name:</b>&emsp;&emsp;<input type="text" name="groupName">
+</p>
+<p>
+<b>Email:</b>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="email" name="email" required>
+</p>
+<b>Phone:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="tel" name="phone" id="phone" required onchange="checkPhone();">
+<hr>
+<b>Payment Method&emsp;</b>
+<input type="radio" name="payment" id="paypal"><b>PayPal</b>
+<input type="radio" name="payment" id="atDoor"><b>Pay At The Door</b>
+<p><input type="submit" id="submit" onclick="paymentType();">
+<!-- if paypal selected - on submit www.paypal.com should popup to complete the registration -->
+
+<button type="button" id="back" onclick="window.location='events.html';">
+Back</button></p>
+</form>
+</body>
+</html>

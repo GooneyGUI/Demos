@@ -1,0 +1,30 @@
+/* This is the stylesheet which corresponds to the contacts page. 	*/
+
+ /*FONT SELECTION*/
+@font-face 
+{
+	font-family: Overlock;
+	src:url(fonts/Overlock.ttf);
+	}
+/* END FORMAT FOR ALL PAGES */
+/* BODY STYLE */	
+body {
+	font-family: Overlock;
+	font-size: 26px;
+		background-color: rgb(178,255,102);
+	}
+/* END FORMAT FOR ALL PAGES */
+	
+/* CONTACT US..*/
+h1{
+	text-align: center;
+	margin-bottom: 15px;
+	}
+		
+		
+#submit{
+	width: 90px;
+	height: 50px;
+	font-size: 22px;
+	font-family: Overlock;
+	}

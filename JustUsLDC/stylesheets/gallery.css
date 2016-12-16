@@ -1,0 +1,44 @@
+* GALLERY PAGE PROPERTIES*/
+	
+/***********************************
+ ****	FORMAT FOR ALL PAGES ****
+ ***********************************/
+
+ /*FONT SELECTION*/
+@font-face {
+	font-family: Overlock;
+	src:url(fonts/Overlock.ttf);
+	}
+	
+/* BODY STYLE */	
+body {
+	font-family: 'Overlock';
+	background-color: rgb(178,255,102);
+	font-size: 32px;
+	}
+
+h1{
+	margin-top: 10px;
+	}
+
+/************************************
+**  GALLERY IMAGE PROPERTIES  **
+************************************/
+.gallery{
+	display: block;
+	margin: auto;
+	border-radius: 30px;
+	box-shadow: 10px 5px 25px 10px #0d2d05;
+	border: 20px solid #161615;
+	
+}
+
+/***********************************
+ ****		NAVIGATION BAR 		  ****
+ ***********************************/
+#links{
+	text-align: center;
+	margin-top: 30px;
+	width: 100%;
+	}
+

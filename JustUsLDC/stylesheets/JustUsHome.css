@@ -1,0 +1,59 @@
+/* 
+Java Script Final Project 
+Alfeia G. Bell, Nana Amin
+12/9/16
+Fall 2016
+*/
+
+/*This is the stylesheet which corresponds to JustUs LDC web landing page. */
+
+	
+/***********************************
+ ****	FORMAT FOR ALL PAGES ****
+ ***********************************/
+
+ /*FONT SELECTION*/
+@font-face 
+{
+	font-family: Overlock;
+	src:url(fonts/Overlock.ttf);
+	}
+/* END FORMAT FOR ALL PAGES */
+/* END FORMAT FOR ALL PAGES */
+	
+/* BODY STYLE */	
+body {
+	font-family: 'Overlock';
+	background-color: rgb(178,255,102);
+	font-size: 32px;
+	}
+/* END FORMAT FOR ALL PAGES */
+	
+	
+/***********************************
+ ****			LOGO FORMAT 		  ****
+ ***********************************/
+.logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	width: 55%;
+	padding: 20px 0;
+}
+/* END LOGO FORMAT */
+
+/***********************************
+ ****		NAVIGATION BAR 		  ****
+ ***********************************/
+#links{
+	text-align: center;
+	margin-top: 10px;
+}
+/* END NAVIGATION BAR */
+/*******************************
+***** BROWSER INFO *********
+*******************************/
+#browser{
+	font-size: 18px;
+}

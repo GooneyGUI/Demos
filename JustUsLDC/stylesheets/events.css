@@ -1,0 +1,45 @@
+/*This is the stylesheet which corresponds to the events.html page. */
+
+	
+/***********************************
+ ****	FORMAT FOR ALL PAGES ****
+ ***********************************/
+
+ /*FONT SELECTION*/
+@font-face 
+{
+	font-family: Overlock;
+	src:url(fonts/Overlock.ttf);
+	}
+/* END FORMAT FOR ALL PAGES */
+/* BODY STYLE */	
+body {
+	font-family: 'Overlock';
+	font-size: 32px;
+	}
+/* END FORMAT FOR ALL PAGES */
+
+/**********************************
+****  IMAGE PROPERTIES  ****
+**********************************/
+.flyer{
+	border-radius: 20px;
+}
+
+/**********************************
+ ****		NAVIGATION BAR 		   ****
+ ***********************************/
+ #links{
+	text-align: center;
+	margin-top: 10px;
+}
+/* END NAVIGATION BAR */
+
+
+/************************************
+ *** FONT STYLE FOR THIS PAGE ***
+ ************************************/
+ body{
+	 	background-color: rgb(0,0,0);
+		color: rgb(256,256,256);
+ }
