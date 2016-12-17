@@ -1,0 +1,24 @@
+
+body{
+	color: #002259;
+}
+
+.logo{
+		width: 900px;
+		margin-top: auto;
+}
+
+.siteLinks{
+	font-size: 50px;
+	text-align: auto;
+}
+a:link{
+	color: #002259;
+}
+a:hover{
+	color: #a3e2b3;
+}
+
+a:visited{
+	color: #b25b79;
+}
